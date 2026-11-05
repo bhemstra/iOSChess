@@ -5,7 +5,7 @@ Dit projectje heb ik lang geleden via Udemy gestart. Op iOS 10 werkte het, dus w
 ## Wat zit erin
 
 - **Alle schaakregels**: rokade, en passant, promotie, schaakmat, pat, 50-zettenregel, drievoudige herhaling en onvoldoende materiaal.
-- **Computertegenstander** in drie niveaus (minimax met alpha-beta). Hij rekent op de achtergrond, dus de app blijft reageren.
+- **Computertegenstander** in drie niveaus: makkelijk (kijkt kort vooruit, met wat toeval), gemiddeld (0,7 s per zet) en moeilijk (2,5 s per zet, ruim 10 halve zetten diep). De engine gebruikt PVS met iteratief verdiepen, een transpositietabel, null-move pruning, late-move reductions en een PeSTO-evaluatie. Hij rekent op de achtergrond, dus de app blijft reageren.
 - **Twee spelers** op één toestel.
 - Tik-om-te-zetten én slepen, mogelijke zetten gemarkeerd, zettenlijst in standaardnotatie, zet terugnemen, bord draaien, donkere modus, iPhone en iPad (staand en liggend).
 
@@ -28,6 +28,8 @@ De regels en de engine test je zo:
 ```bash
 cd ChessApp/ChessKit && swift test
 ```
+
+Met `CHESS_BENCH=1` draait ook een benchmark, die laat zien hoe diep en hoe snel de engine zoekt.
 
 In debug-builds kun je de app direct in een partij laten starten (handig in de Simulator):
 

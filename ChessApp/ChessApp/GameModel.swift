@@ -183,10 +183,11 @@ final class GameModel {
 
         isThinking = true
         let start = position
+        let history = game.history.map(\.positionBefore)
         let engine = Engine(level: level)
         engineTask = Task {
             // Search off the main thread; cancelling this task cancels the search.
-            let search = Task.detached(priority: .userInitiated) { engine.bestMove(in: start) }
+            let search = Task.detached(priority: .userInitiated) { engine.bestMove(in: start, history: history) }
             async let minimumDelay: Void? = try? Task.sleep(for: .milliseconds(350))
             let move = await withTaskCancellationHandler {
                 await search.value

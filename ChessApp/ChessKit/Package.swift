@@ -8,7 +8,14 @@ let package = Package(
         .library(name: "ChessKit", targets: ["ChessKit"])
     ],
     targets: [
-        .target(name: "ChessKit"),
+        .target(
+            name: "ChessKit",
+            swiftSettings: [
+                // The engine is useless without optimisation, so optimise it even in Debug
+                // builds (e.g. when running from Xcode on a device).
+                .unsafeFlags(["-O"], .when(configuration: .debug))
+            ]
+        ),
         .testTarget(name: "ChessKitTests", dependencies: ["ChessKit"])
     ]
 )

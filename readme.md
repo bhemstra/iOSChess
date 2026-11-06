@@ -18,20 +18,3 @@ ChessApp/
 └── ChessKit/             Swift-package zonder UIKit: regels, notatie en engine
     └── Tests/            Swift Testing, inclusief perft-tests voor de zettengenerator
 ```
-
-## Bouwen en testen
-
-Open `ChessApp/ChessApp.xcodeproj` in Xcode en druk op Run. Voor je eigen iPhone kies je onder *Signing & Capabilities* je eigen Team.
-
-De regels en de engine test je zo:
-
-```bash
-cd ChessApp/ChessKit && swift test
-```
-
-Met `CHESS_BENCH=1` draait ook een benchmark, die laat zien hoe diep en hoe snel de engine zoekt.
-
-In debug-builds kun je de app direct in een partij laten starten (handig in de Simulator):
-
-- `-startAsBlack` start een partij tegen de computer, waarin jij zwart speelt.
-- `-debugFEN "<fen>"` start een tweespelerspartij vanuit die stelling.

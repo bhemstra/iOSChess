@@ -21,3 +21,9 @@ ChessApp/
 └── ChessKit/             Swift-package zonder UIKit: regels, notatie en engine
     └── Tests/            Swift Testing, inclusief perft-tests voor de zettengenerator
 ```
+
+## Licentie
+
+Uitgebracht onder de [MIT-licentie](LICENSE).
+
+De evaluatie gebruikt de PeSTO-stukwaardetabellen van Ronald Friederich (engine RofChade), zoals gepubliceerd op de [Chess Programming Wiki](https://www.chessprogramming.org/PeSTO%27s_Evaluation_Function).

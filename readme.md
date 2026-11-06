@@ -9,6 +9,9 @@ Dit projectje heb ik lang geleden via Udemy gestart. Op iOS 10 werkte het, dus w
 - **Twee spelers** op één toestel.
 - Tik-om-te-zetten én slepen, mogelijke zetten gemarkeerd, zettenlijst in standaardnotatie, zet terugnemen, bord draaien, donkere modus, iPhone en iPad (staand en liggend).
 
+<img width="266" height="534" alt="Scherm­afbeelding 2026-11-06 om 09 23 38" src="https://github.com/user-attachments/assets/ef36130e-80ba-4eab-9a78-89e9ea10ca2a" />
+
+
 ## Opbouw
 
 ```
